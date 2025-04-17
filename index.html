@@ -13,25 +13,6 @@
             background-color: #f9f9f9;
         }
 
-        .topbar {
-            background-color: #ffffff;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        .cta {
-            font-weight: bold;
-            color: #0a8000;
-            font-size: 1rem;
-        }
-
         nav {
             background-color: #001f4d;
             color: white;
@@ -51,12 +32,34 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem 3rem;
             text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 30, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-logo img {
+            max-height: 60px;
+            margin-bottom: 1rem;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -77,8 +80,13 @@
             color: #001f4d;
         }
 
-        .content p {
-            line-height: 1.6;
+        .content ul {
+            padding-left: 20px;
+            margin-top: 0.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
         }
 
         .contact {
@@ -137,7 +145,7 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
 
             .hero p {
@@ -148,24 +156,10 @@
                 display: block;
                 margin: 10px 0;
             }
-
-            .topbar {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
         }
     </style>
 </head>
 <body>
-
-    <div class="topbar">
-        <div class="logo">
-            <img src="logo.png" alt="AFA Legal Logo" />
-        </div>
-        <div class="cta">
-            Gratis intake: 085 123 45 67
-        </div>
-    </div>
 
     <nav>
         <a href="#">Home</a>
@@ -174,18 +168,28 @@
     </nav>
 
     <section class="hero">
-        <h1>Juridisch adviesbureau</h1>
-        <p>Helder. Toegankelijk. Betrouwbaar. Altijd aan jouw kant.</p>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="logo.png" alt="AFA Legal Logo" />
+            </div>
+            <h1>Juridisch adviesbureau</h1>
+            <p>Helder. Toegankelijk. Betrouwbaar. Altijd aan jouw kant.</p>
+        </div>
     </section>
 
     <div class="content" id="diensten">
-        <h2>Juridisch advies binnen het Sociaal Domein</h2>
-        <p>
-            Bent u op zoek naar deskundig juridisch advies binnen het sociaal domein? Dan bent u bij AFA Legal aan het juiste adres. Wij bieden ondersteuning aan zowel particulieren als organisaties bij juridische vraagstukken op het gebied van uitkeringen, zorg, gemeentelijke regelgeving en meer.
-        </p>
-        <p>
-            Wij staan voor duidelijke communicatie, transparantie in kosten en een persoonlijke benadering. Neem vandaag nog contact met ons op voor een gratis intakegesprek.
-        </p>
+        <h2>Sta sterker met deskundige hulp bij bezwaar en beroep</h2>
+        <p>Een besluit van de overheid kan grote gevolgen hebben. Of het nu gaat om een afwijzing van een uitkering, een terugvordering, of een andere beslissing van het UWV, de Gemeente, de Belastingdienst, DUO of de SVB – het is belangrijk om te weten dat u niet machteloos staat.</p>
+        <p>Bij ons juridisch adviesbureau krijgt u persoonlijke, deskundige en toegankelijke hulp bij het opstellen van bezwaar- en beroepschriften. Wij zetten ons in voor uw recht en zorgen ervoor dat uw verhaal op een heldere en overtuigende manier wordt overgebracht.</p>
+        <h3>Wat wij doen:</h3>
+        <ul>
+            <li>Bezwaar- en beroepschriften opstellen en indienen</li>
+            <li>Beoordeling van besluiten en het geven van juridisch advies</li>
+            <li>Correspondentie met overheidsinstanties</li>
+            <li>Ondersteuning tijdens zittingen bij de rechtbank of bezwaarcommissies</li>
+        </ul>
+        <p>Wij geloven in laagdrempelige en betrokken hulp, met oog voor uw situatie. Samen gaan we voor een rechtvaardige uitkomst.</p>
+        <p><strong>Laat uw recht niet liggen. Neem contact met ons op voor een vrijblijvend adviesgesprek.</strong></p>
     </div>
 
     <section class="contact" id="contact">
