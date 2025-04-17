@@ -2,50 +2,214 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AFA Legal – Juridisch Adviesbureau</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .topbar {
+            background-color: #ffffff;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .cta {
+            font-weight: bold;
+            color: #0a8000;
+            font-size: 1rem;
+        }
+
+        nav {
+            background-color: #001f4d;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1589216532372-d7d7d7df92f4?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .content h2 {
+            color: #001f4d;
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 2rem 1rem;
+            background-color: #f1f5f9;
+            border-top: 2px solid #001f4d;
+        }
+
+        .contact h2 {
+            color: #001f4d;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form button {
+            background-color: #001f4d;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #003366;
+        }
+
+        footer {
+            background-color: #001f4d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .topbar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <div class="topbar">
         <div class="logo">
             <img src="logo.png" alt="AFA Legal Logo" />
         </div>
-        <div class="header-text">
-            <h1>AFA Legal</h1>
-            <p>Juridisch advies binnen het Sociaal Domein</p>
+        <div class="cta">
+            Gratis intake: 085 123 45 67
         </div>
-    </header>
+    </div>
 
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Over Ons</a></li>
-            <li><a href="#">Diensten</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <main>
-        <section class="intro">
-            <h2>Welkom bij AFA Legal</h2>
-            <p>Professioneel juridisch advies binnen het sociaal domein. Betrouwbaar, helder en gericht op resultaat voor onze cliënten.</p>
-            <a href="mailto:info@afalegal.nl" class="cta-button">Neem contact op</a>
-        </section>
+    <section class="hero">
+        <h1>Juridisch adviesbureau</h1>
+        <p>Helder. Toegankelijk. Betrouwbaar. Altijd aan jouw kant.</p>
+    </section>
 
-        <section class="diensten">
-            <h2>Onze Diensten</h2>
-            <ul>
-                <li>Advies op maat binnen het sociaal domein</li>
-                <li>Begeleiding bij bezwaar- en beroepsprocedures</li>
-                <li>Ondersteuning voor gemeenten en instellingen</li>
-                <li>Toegankelijk juridisch taalgebruik</li>
-            </ul>
-        </section>
-    </main>
+    <div class="content" id="diensten">
+        <h2>Juridisch advies binnen het Sociaal Domein</h2>
+        <p>
+            Bent u op zoek naar deskundig juridisch advies binnen het sociaal domein? Dan bent u bij AFA Legal aan het juiste adres. Wij bieden ondersteuning aan zowel particulieren als organisaties bij juridische vraagstukken op het gebied van uitkeringen, zorg, gemeentelijke regelgeving en meer.
+        </p>
+        <p>
+            Wij staan voor duidelijke communicatie, transparantie in kosten en een persoonlijke benadering. Neem vandaag nog contact met ons op voor een gratis intakegesprek.
+        </p>
+    </div>
+
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <form>
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" placeholder="Uw naam" />
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="uw@emailadres.nl" />
+
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" rows="5" placeholder="Typ hier uw bericht..."></textarea>
+
+                <button type="submit">Verstuur</button>
+            </form>
+            <p style="text-align:center; margin-top: 1rem;">Of mail ons direct via <a href="mailto:info@afalegal.nl">info@afalegal.nl</a></p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 AFA Legal | info@afalegal.nl</p>
+        &copy; 2025 AFA Legal – info@afalegal.nl
     </footer>
+
 </body>
 </html>
