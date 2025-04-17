@@ -1,219 +1,197 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AFA Legal – Juridisch Adviesbureau</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFA Legal – Juridisch Adviesbureau</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-        nav {
-            background-color: #001f4d;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
+    nav {
+      background-color: #0f1722;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1589216532372-d7d7d7df92f4?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 5rem 2rem 3rem;
-            text-align: center;
-            position: relative;
-        }
+    .hero {
+      background-color: #0f1722;
+      color: white;
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 30, 0.6);
-            z-index: 1;
-        }
+    .hero-logo img {
+      max-height: 140px;
+      margin-bottom: 1rem;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .hero-logo img {
-            max-height: 60px;
-            margin-bottom: 1rem;
-        }
+    .hero p {
+      font-size: 1.2rem;
+    }
 
-        .hero h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-        }
+    .content h2 {
+      color: #0f1722;
+    }
 
-        .content {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
+    .content ul {
+      padding-left: 20px;
+      margin-top: 0.5rem;
+    }
 
-        .content h2 {
-            color: #001f4d;
-        }
+    .content li {
+      margin-bottom: 0.5rem;
+    }
 
-        .content ul {
-            padding-left: 20px;
-            margin-top: 0.5rem;
-        }
+    .contact {
+      padding: 2rem 1rem;
+      background-color: #f1f5f9;
+      border-top: 2px solid #0f1722;
+    }
 
-        .content li {
-            margin-bottom: 0.5rem;
-        }
+    .contact h2 {
+      color: #0f1722;
+      text-align: center;
+    }
 
-        .contact {
-            padding: 2rem 1rem;
-            background-color: #f1f5f9;
-            border-top: 2px solid #001f4d;
-        }
+    .contact-form {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
 
-        .contact h2 {
-            color: #001f4d;
-            text-align: center;
-        }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 1rem auto;
-        }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
+    .contact-form button {
+      background-color: #0f1722;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-        }
+    .contact-form button:hover {
+      background-color: #1a2633;
+    }
 
-        .contact-form button {
-            background-color: #001f4d;
-            color: white;
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+    footer {
+      background-color: #0f1722;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
 
-        .contact-form button:hover {
-            background-color: #003366;
-        }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
 
-        footer {
-            background-color: #001f4d;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 3rem;
-        }
+      .hero p {
+        font-size: 1rem;
+      }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.7rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#diensten">Diensten</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#diensten">Diensten</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="logo.png" alt="AFA Legal Logo" />
-            </div>
-            <h1>Juridisch adviesbureau</h1>
-            <p>Helder. Toegankelijk. Betrouwbaar. Altijd aan jouw kant.</p>
-        </div>
-    </section>
-
-    <div class="content" id="diensten">
-        <h2>Sta sterker met deskundige hulp bij bezwaar en beroep</h2>
-        <p>Een besluit van de overheid kan grote gevolgen hebben. Of het nu gaat om een afwijzing van een uitkering, een terugvordering, of een andere beslissing van het UWV, de Gemeente, de Belastingdienst, DUO of de SVB – het is belangrijk om te weten dat u niet machteloos staat.</p>
-        <p>Bij ons juridisch adviesbureau krijgt u persoonlijke, deskundige en toegankelijke hulp bij het opstellen van bezwaar- en beroepschriften. Wij zetten ons in voor uw recht en zorgen ervoor dat uw verhaal op een heldere en overtuigende manier wordt overgebracht.</p>
-        <h3>Wat wij doen:</h3>
-        <ul>
-            <li>Bezwaar- en beroepschriften opstellen en indienen</li>
-            <li>Beoordeling van besluiten en het geven van juridisch advies</li>
-            <li>Correspondentie met overheidsinstanties</li>
-            <li>Ondersteuning tijdens zittingen bij de rechtbank of bezwaarcommissies</li>
-        </ul>
-        <p>Wij geloven in laagdrempelige en betrokken hulp, met oog voor uw situatie. Samen gaan we voor een rechtvaardige uitkomst.</p>
-        <p><strong>Laat uw recht niet liggen. Neem contact met ons op voor een vrijblijvend adviesgesprek.</strong></p>
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="logo.png" alt="AFA Legal Logo" />
     </div>
+    <h1>Juridisch adviesbureau</h1>
+    <p>Helder. Toegankelijk. Betrouwbaar. Altijd aan jouw kant.</p>
+  </section>
 
-    <section class="contact" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-form">
-            <form>
-                <label for="naam">Naam</label>
-                <input type="text" id="naam" placeholder="Uw naam" />
+  <div class="content" id="diensten">
+    <h2>Sta sterker met deskundige hulp bij bezwaar en beroep</h2>
+    <p>Een besluit van de overheid kan grote gevolgen hebben. Of het nu gaat om een afwijzing van een uitkering, een terugvordering, of een andere beslissing van het UWV, de Gemeente, de Belastingdienst, DUO of de SVB – het is belangrijk om te weten dat u niet machteloos staat.</p>
+    <p>Bij ons juridisch adviesbureau krijgt u persoonlijke, deskundige en toegankelijke hulp bij het opstellen van bezwaar- en beroepschriften. Wij zetten ons in voor uw recht en zorgen ervoor dat uw verhaal op een heldere en overtuigende manier wordt overgebracht.</p>
+    <h3>Wat wij doen:</h3>
+    <ul>
+      <li>Bezwaar- en beroepschriften opstellen en indienen</li>
+      <li>Beoordeling van besluiten en het geven van juridisch advies</li>
+      <li>Correspondentie met overheidsinstanties</li>
+      <li>Ondersteuning tijdens zittingen bij de rechtbank of bezwaarcommissies</li>
+    </ul>
+    <p><strong>Laat uw recht niet liggen. Neem contact met ons op voor een vrijblijvend adviesgesprek.</strong></p>
+  </div>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="uw@emailadres.nl" />
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-form">
+      <form>
+        <label for="naam">Naam</label>
+        <input type="text" id="naam" placeholder="Uw naam" />
 
-                <label for="bericht">Bericht</label>
-                <textarea id="bericht" rows="5" placeholder="Typ hier uw bericht..."></textarea>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="uw@emailadres.nl" />
 
-                <button type="submit">Verstuur</button>
-            </form>
-            <p style="text-align:center; margin-top: 1rem;">Of mail ons direct via <a href="mailto:info@afalegal.nl">info@afalegal.nl</a></p>
-        </div>
-    </section>
+        <label for="bericht">Bericht</label>
+        <textarea id="bericht" rows="5" placeholder="Typ hier uw bericht..."></textarea>
 
-    <footer>
-        &copy; 2025 AFA Legal – info@afalegal.nl
-    </footer>
+        <button type="submit">Verstuur</button>
+      </form>
+      <p style="text-align:center; margin-top: 1rem;">Of mail ons direct via <a href="mailto:info@afalegal.nl">info@afalegal.nl</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 AFA Legal – info@afalegal.nl
+  </footer>
 
 </body>
 </html>
